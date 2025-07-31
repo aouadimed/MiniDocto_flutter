@@ -36,7 +36,7 @@ A comprehensive Flutter application for booking medical appointments and managin
 
 ## 🚀 Features
 
-- **User Authentication**: Secure login and registration with Firebase Auth
+- **User Authentication**: Secure login
 - **Doctor Discovery**: Browse available healthcare professionals
 - **Smart Scheduling**: View doctor availability and book appointments
 - **Appointment Management**: Track, reschedule, and cancel bookings
@@ -99,7 +99,7 @@ dependencies:
 3. **Configure Firebase**
    - Create a new Firebase project
    - Add your `google-services.json` (Android) and `GoogleService-Info.plist` (iOS)
-   - Enable Authentication, Firestore, and Analytics
+   - Enable Analytics
 
 4. **Run the app**
    ```bash
@@ -109,10 +109,7 @@ dependencies:
 ## 🔐 Firebase Configuration
 
 The app uses Firebase for:
-- **Authentication**: Email/password login and registration
-- **Database**: Firestore for storing user data and appointments
 - **Analytics**: Comprehensive user behavior tracking
-- **Security**: Firestore security rules for data protection
 
 ## 📊 Analytics Events
 
@@ -126,6 +123,9 @@ The app tracks 25+ user interactions including:
 <div align="center">
   <img src="phone screenshots/Analytics.png" width="200" alt=""/>
 </div>
+
+
+
 
 ## 🧪 Testing
 
