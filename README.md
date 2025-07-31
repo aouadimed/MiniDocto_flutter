@@ -5,7 +5,7 @@ A comprehensive Flutter application for booking medical appointments and managin
 ## 📱 App Screenshots
 
 ### Authentication & Onboarding
-<div align="center">Screenshot_1753979914/Screenshot_1753979912
+<div align="center">
   <img src="phone screenshots/Screenshot_1753979912.png" width="200" alt="Profile Screen"/>
   <img src="phone screenshots/Screenshot_1753979914.png" width="200" alt="Navigation"/>
 </div>
@@ -87,7 +87,7 @@ dependencies:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/mini-docto-plus.git
+   git clone https://github.com/aouadimed/MiniDocto_flutter.git
    cd mini-docto-plus
    ```
 
@@ -123,14 +123,13 @@ The app tracks 25+ user interactions including:
 - Navigation patterns
 - Error tracking and performance metrics
 
+<div align="center">
+  <img src="phone screenshots/Analytics.png" width="200" alt=""/>
+</div>
+
 For detailed analytics documentation, see [FIREBASE_ANALYTICS_EVENTS.md](FIREBASE_ANALYTICS_EVENTS.md)
 
-## 🌐 Localization
 
-Supports multiple languages:
-- **Arabic (ar)**: Right-to-left layout support
-- **French (fr)**: Complete translation
-- **English (en)**: Default language
 
 ## 🧪 Testing
 
@@ -151,22 +150,10 @@ flutter test integration_test/
 - ✅ **macOS** (Desktop support)
 - ✅ **Linux** (Desktop support)
 
-## 🤝 Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Developer
 
-Built with ❤️ using Flutter
-
----
-
-**Mini Docto+** - Making healthcare accessible and convenient for everyone.
