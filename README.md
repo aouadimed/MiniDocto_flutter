@@ -127,10 +127,6 @@ The app tracks 25+ user interactions including:
   <img src="phone screenshots/Analytics.png" width="200" alt=""/>
 </div>
 
-For detailed analytics documentation, see [FIREBASE_ANALYTICS_EVENTS.md](FIREBASE_ANALYTICS_EVENTS.md)
-
-
-
 ## 🧪 Testing
 
 ```bash
