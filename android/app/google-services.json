@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "522195949252",
+    "project_id": "mini-docto",
+    "storage_bucket": "mini-docto.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522195949252:android:e8f30912db16c1d662db91",
+        "android_client_info": {
+          "package_name": "com.example.flutter_user"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA34zXhOhKEa7uatvvBWSoCamCrTPq5LJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

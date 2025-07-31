@@ -1,0 +1,107 @@
+import 'package:flutter_user/core/constants/appcolors.dart';
+import 'package:flutter_user/global/common_widget/text_form_field.dart';
+import 'package:flutter_user/global/utils/form_validator.dart';
+import 'package:flutter/material.dart';
+
+class LoginForm extends StatefulWidget {
+  final GlobalKey<FormState> formKey;
+  final TextEditingController emailController;
+  final TextEditingController passwordController;
+  final void Function() loginAction;
+  final bool isLoading;
+
+  const LoginForm({
+    super.key,
+    required this.formKey,
+    required this.emailController,
+    required this.passwordController,
+    required this.loginAction,
+    required this.isLoading,
+  });
+
+  @override
+  State<LoginForm> createState() => _LoginFormState();
+}
+
+class _LoginFormState extends State<LoginForm> {
+  bool _hidePassword = true;
+
+  final FocusNode _emailFocusNode = FocusNode();
+  final FocusNode _passwordFocusNode = FocusNode();
+
+  @override
+  void dispose() {
+    _emailFocusNode.dispose();
+    _passwordFocusNode.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: widget.formKey,
+      child: Column(
+        children: [
+          InputField(
+            controller: widget.emailController,
+            hint: "Email",
+            prefixIcon: const Icon(Icons.email, color: Colors.grey),
+            textInputType: TextInputType.emailAddress,
+            textInputAction: TextInputAction.next,
+            focusNode: _emailFocusNode,
+            onFieldSubmitted: (_) {
+              FocusScope.of(context).requestFocus(_passwordFocusNode);
+            },
+            validator: (value) {
+              return FormValidator.validateEmail(value);
+            },
+          ),
+          const SizedBox(height: 16),
+          InputField(
+            controller: widget.passwordController,
+            hint: "Password",
+            obscureText: _hidePassword,
+            prefixIcon: const Icon(Icons.lock, color: Colors.grey),
+            suffixIcon: InkWell(
+              onTap:
+                  () => {
+                    setState(() {
+                      _hidePassword = !_hidePassword;
+                    }),
+                  },
+              child:
+                  _hidePassword
+                      ? const Icon(Icons.visibility_off)
+                      : const Icon(Icons.visibility),
+            ),
+            textInputAction: TextInputAction.done,
+            focusNode: _passwordFocusNode,
+            validator: (value) {
+              return FormValidator.validatePassword(value);
+            },
+          ),
+          const SizedBox(height: 30),
+          widget.isLoading
+              ? CircularProgressIndicator(color: primaryColor)
+              : SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: 50.0,
+                child: ElevatedButton(
+                  onPressed: widget.loginAction,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                  ),
+                  child: const Text(
+                    'SIGN IN',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+        ],
+      ),
+    );
+  }
+}
